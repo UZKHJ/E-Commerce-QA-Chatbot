@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Loads the CSS from Css Folder -->
+    <link rel="stylesheet" href="Css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Auto Chatbot</title>
+</head>
+<body>
+    <div style="text-align:center">
+        <h1>E-Commerce Auto Chatbot</h1>
+        <!-- Adds a form to collect user's name on load -->
+        <form id="nameForm">
+            <label for="userName">Please enter your name:</label>
+            <input type="text" id="userName" name="userName">
+            <button type="button" onclick="saveUserName()">Submit</button>
+        </form>
+        <!-- Hides the query input and button until the name is submitted -->
+        <div id="chatbox" style="display:none;">
+            <label for="query">Please type your Query:</label>
+            <input type="text" id="query" name="query">
+            <button id="submit" name="submit" onclick="sendQuery()">Send</button>
+            <button onclick="savePrompt()">Save Conversation</button>
+            <div id="response" name="response"></div>
+        </div>
+    </div>
+    <!-- Loads the Script from Script Folder -->
+    <script src="script/script.js"></script>
+</body>
+</html>
